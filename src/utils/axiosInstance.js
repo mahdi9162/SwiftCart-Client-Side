@@ -1,5 +1,5 @@
 const { default: axios } = require('axios');
 
 export const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://swift-cart-server-side.vercel.app',
 });

@@ -1,36 +1,185 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SwiftCart — Next.js (App Router) Catalog Store
 
-## Getting Started
+SwiftCart is a clean, modern catalog experience for a **clothing-style store**.
+Users can browse items quickly, open product details instantly, and (optionally) add new items using a **simple cookie-based mock login**.
 
-First, run the development server:
+---
+
+## Tech Stack
+
+- **Next.js 15/16 (App Router)**
+- **Tailwind CSS**
+- **Express.js REST API / JSON** (server)
+- **Cookie-based mock authentication** (hardcoded demo credentials)
+
+---
+
+## Repositories
+
+- **Client:** https://github.com/mahdi9162/SwiftCart-Client-Side.git
+- **Server:** https://github.com/mahdi9162/SwiftCart-Server-Side.git
+
+---
+
+## Pages & Routes (App Router)
+
+### Public Pages
+
+- `/` → Landing page (Navbar + Footer + 7 sections)
+- `/items/lists` → Items list page (fetches items from API)
+- `/items/[id]` → Item details page (fetches single item by id)
+- `/login` → Mock login page
+
+### Protected Page (Cookie Auth)
+
+- `/add-item` → Add item form (requires login)
+
+> **Auth rule:** If cookies are missing/invalid, protected routes redirect users to `/login`.
+
+---
+
+## Landing Page Sections (7 Total)
+
+✅ Navbar + Footer included (not counted in 7)
+
+1. Hero
+2. Categories
+3. How It Works
+4. Trending
+5. Features
+6. About
+7. FAQ
+
+---
+
+## Implemented Features
+
+### Items List Page (`/items/lists`)
+
+- Publicly accessible
+- Fetches product list from Express API
+- Each card shows:
+  - Name, price, category
+  - Stock status
+  - Image
+  - “View Details” link → `/items/[id]`
+
+### Item Details Page (`/items/[id]`)
+
+- Publicly accessible
+- Fetches a single item by `id`
+- Displays:
+  - Title, price, category
+  - Stock status
+  - Full description
+  - Product image
+
+### Mock Authentication (Cookies)
+
+- Login uses **hardcoded demo email/password**
+- On successful login:
+  - Stores auth info in cookies
+  - Redirects to `/items/lists`
+- Logout:
+  - Clears cookies
+  - Updates UI state accordingly
+
+### Add Item (`/add-item`) — Protected
+
+- Only accessible after login
+- Form to add a new product
+- Sends product data to Express server and stores it in DB
+
+### Extra Enhancements
+
+- Toast notifications (success/error)
+- Loading UI for data-fetching pages
+- Consistent UI sections for assignment presentation
+
+---
+
+## API (Demo)
+
+> Replace later with your real deployed API.
+
+**Base URL (demo):**
+
+- `http://localhost:5000`
+
+### Endpoints
+
+- `GET /items` → get all items
+- `GET /items/:id` → get item details by id
+- `POST /items` → add a new item (used by Add Item page)
+
+---
+
+## Demo Login Credentials (Placeholder)
+
+> Replace later with real credentials.
+
+- Email: `demo@swiftcart.com`
+- Password: `123456`
+
+---
+
+## Setup & Installation
+
+### 1) Run Server (Demo)
 
 ```bash
+git clone https://github.com/mahdi9162/SwiftCart-Server-Side.git
+cd SwiftCart-Server-Side
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Server :
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:5000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Run Client
 
-## Learn More
+```
+git clone https://github.com/mahdi9162/SwiftCart-Client-Side.git
+cd SwiftCart-Client-Side
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Client :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+http://localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure (Client)
 
-## Deploy on Vercel
+```
+src/app/
+  page.js                → Landing Page
+  login/page.jsx
+  add-item/page.jsx
+  items/lists/page.jsx
+  items/[id]/page.jsx
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+src/components/home/
+  Hero.jsx
+  Categories.jsx
+  HowItWorks.jsx
+  Trending.jsx
+  Features.jsx
+  AboutUs.jsx
+  FAQ.jsx
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/components/shared/
+  Navbar.jsx
+  Footer.jsx
+```
+
+### Note
+
+- This project uses cookie-based mock auth (no Firebase/NextAuth).
+- Designed for assignment requirements: public pages, protected page, CRUD via Express API, and clear UI sections.

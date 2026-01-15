@@ -11,8 +11,6 @@ import AboutUs from '@/components/home/AboutUs';
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <main>
         <Hero />
         <Categories />
@@ -22,8 +20,6 @@ export default function Home() {
         <AboutUs />
         <FAQ />
       </main>
-
-      <Footer />
     </>
   );
 }

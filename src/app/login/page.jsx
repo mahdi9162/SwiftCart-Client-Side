@@ -27,6 +27,7 @@ const Login = () => {
       // eslint-disable-next-line react-hooks/immutability
       document.cookie = 'email=demo@swiftcart.com; path=/; max-age=86400';
       router.push('/items/lists');
+      router.refresh();
       toast.success('Successfully Login');
     }
   };

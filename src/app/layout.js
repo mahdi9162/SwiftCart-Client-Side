@@ -1,5 +1,6 @@
 import './globals.css';
 import ToastProvider from '@/components/ToastProvider';
+import Footer from '@/components/shared/Footer';
 import Navbar from '@/components/shared/Navbar';
 import QueryProvider from '@/providers/QueryProvider';
 
@@ -13,12 +14,18 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <ToastProvider />
+
         <header>
           <Navbar />
         </header>
+
         <main>
           <QueryProvider>{children}</QueryProvider>
         </main>
+
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

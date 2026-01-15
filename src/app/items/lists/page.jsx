@@ -74,7 +74,7 @@ const Items = () => {
               {/* Content Section */}
               <div className="p-6">
                 <div className="flex items-start justify-between gap-2">
-                  <h2 className="text-xl font-bold tracking-tight group-hover:text-white transition-colors">{item.itemName}</h2>
+                  <h2 className="text-xl font-bold tracking-tight group-hover:text-white transition-colors line-clamp-1">{item.itemName}</h2>
                   <span className="flex h-2 w-2 mt-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.6)]" />
                 </div>
 

@@ -43,24 +43,24 @@ const categories = [
 
 const Categories = () => {
   return (
-    <section className="relative bg-slate-900/30 text-white border-t border-white/5 py-20 md:py-32 overflow-hidden">
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+    <section className="relative bg-slate-900/30 text-white border-t border-white/5 py-20 overflow-hidden">
+      <div className="relative z-10 mx-auto max-w-7xl px-3 md:px-0">
         {/* Header */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-8 md:mb-16">
           <div className="space-y-4 max-w-3xl text-left mb-2">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[10px] font-bold tracking-widest text-white/60 uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
               Store Collections
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+            <h2 className="text-2xl md:text-6xl font-bold tracking-tight leading-[1.1]">
               Find what you need, <span className="text-white/40 italic font-light">faster.</span>
             </h2>
           </div>
-          <div className="flex justify-between items-center">
-            <p className="max-w-lg text-base md:text-lg leading-relaxed text-white/50">Shop by category — curated picks, updated weekly.</p>
+          <div className="flex flex-col md:flex-row justify-between md:items-center ">
+            <p className="max-w-lg mt-1 text-xs md:text-lg leading-relaxed text-white/50">Shop by category — curated picks, updated weekly.</p>
             <Link
               href="/items/lists"
-              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-sm font-bold text-white/90 transition-all hover:bg-white/10 active:scale-95 group w-full sm:w-fit"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-8 py-3 md:py-4 text-sm font-bold text-white/90 transition-all hover:bg-white/10 active:scale-95 group w-full sm:w-fit mt-4"
             >
               <FiGrid className="text-white/40 group-hover:text-white transition-colors" />
               View All Catalog
@@ -76,7 +76,7 @@ const Categories = () => {
               <Link
                 key={c.title}
                 href={c.href}
-                className="group relative h-95 flex flex-col justify-end overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900 transition-all duration-500 hover:border-white/20 hover:-translate-y-2"
+                className="group relative h-95 flex flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-slate-900 transition-all duration-500 hover:border-white/20 hover:-translate-y-2"
               >
                 {/* Image Layer */}
                 <div className="absolute inset-0 z-0">

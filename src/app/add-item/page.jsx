@@ -31,6 +31,7 @@ const AddItem = () => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setChecking(false);
   }, [router]);
+
   if (checking) return null;
 
   const handleUploadItem = async (data) => {

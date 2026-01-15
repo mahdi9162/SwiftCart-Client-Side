@@ -100,11 +100,9 @@ Users can browse items quickly, open product details instantly, and (optionally)
 
 ## API (Demo)
 
-> Replace later with your real deployed API.
-
 **Base URL (demo):**
 
-- `http://localhost:5000`
+- `https://swiftcart26.vercel.app`
 
 ### Endpoints
 
@@ -114,9 +112,7 @@ Users can browse items quickly, open product details instantly, and (optionally)
 
 ---
 
-## Demo Login Credentials (Placeholder)
-
-> Replace later with real credentials.
+## Demo Login Credentials
 
 - Email: `demo@swiftcart.com`
 - Password: `123456`
@@ -137,7 +133,7 @@ npm run dev
 ## Server :
 
 ```
-http://localhost:5000
+https://swift-cart-server-side.vercel.app
 ```
 
 ## Run Client
@@ -152,7 +148,7 @@ npm run dev
 ## Client :
 
 ```
-http://localhost:3000
+https://swiftcart26.vercel.app
 ```
 
 ## Project Structure (Client)

@@ -1,0 +1,28 @@
+[debug] [2026-01-15T18:45:28.249Z] ----------------------------------------------------------------------
+[debug] [2026-01-15T18:45:28.251Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-01-15T18:45:28.251Z] CLI Version:   15.0.0
+[debug] [2026-01-15T18:45:28.251Z] Platform:      win32
+[debug] [2026-01-15T18:45:28.251Z] Node Version:  v22.16.0
+[debug] [2026-01-15T18:45:28.251Z] Time:          Fri Jan 16 2026 00:45:28 GMT+0600 (Bangladesh Standard Time)
+[debug] [2026-01-15T18:45:28.251Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-15T18:45:28.253Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\The Journey Of Web Development\PH Course\Next JS\SwiftCart Project\SwiftCart Client Side
+
+[debug] [2026-01-15T18:45:30.929Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-01-15T18:45:30.929Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
